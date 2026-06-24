@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}Создать график{% endblock %}
+
+{% block content %}
+<h2>Создание графика</h2>
+
+<form method="post">
+    {% csrf_token %}
+
+    <label for="id_title">Название графика:</label><br>
+    {{ form.title }}<br><br>
+
+    <label for="id_graph_type">Тип графика:</label><br>
+    {{ form.graph_type }}<br><br>
+
+    <label for="id_color">Цвет линии:</label><br>
+    {{ form.color }}<br><br>
+
+    <label for="id_thickness">Толщина линии:</label><br>
+    {{ form.thickness }}<br><br>
+
+    <label for="id_scale">Масштаб:</label><br>
+    {{ form.scale }}<br><br>
+
+    <input type="submit" value="Создать">
+</form>
+{% endblock %}

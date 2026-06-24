@@ -1,0 +1,235 @@
+/* Общие стили */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Контейнер */
+.container {
+    width: 90%;
+    margin: 10px auto;
+    padding: 15px;
+    background-color: white;
+    border: 1px solid #ddd;
+}
+
+/* Заголовки */
+h1, h2 {
+    text-align: center;
+    color: #4CAF50;
+}
+
+/* Формы */
+form {
+    width: 80%;
+    margin: 20px auto;
+    padding: 15px;
+    border: 1px solid #ddd;
+}
+
+form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+form input, form select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+form button, form input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+/* Списки */
+ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+ul li {
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #f9f9f9;
+    border-left: 3px solid #4CAF50;
+}
+
+/* Ссылки */
+a {
+    color: #4CAF50;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Картинки */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px auto;
+}
+
+/* Разное */
+hr {
+    border: 0;
+    height: 1px;
+    background-color: #ddd;
+    margin: 20px 0;
+}
+
+.back-link {
+    display: block;
+    text-align: center;
+    margin: 20px;
+}
+
+/* Навигация - улучшенная версия */
+nav {
+    background-color: #4CAF50;
+    padding: 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.nav-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+}
+
+.nav-container a, .nav-container button {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 8px 12px;
+    transition: background-color 0.3s;
+    border-radius: 4px;
+}
+
+.nav-container a:hover, .nav-container button:hover {
+    background-color: rgba(255,255,255,0.2);
+}
+
+/* Специальные стили для кнопки "Выйти" */
+.nav-container .logout-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font: inherit;
+    margin-right: auto;
+    order: -1;
+    padding: 8px 12px;
+}
+
+/* Для выравнивания элементов навигации */
+.nav-links {
+    display: flex;
+    gap: 10px;
+    margin-left: auto;
+}
+
+/* Логотип или название сайта */
+.site-title {
+    font-weight: bold;
+    font-size: 18px;
+    padding: 10px 0;
+    margin-left: 10px;
+}
+
+/* Стили для кнопки Войти */
+.login-btn {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font: inherit;
+    padding: 8px 12px;
+    transition: background-color 0.3s;
+    border-radius: 4px;
+}
+
+.login-btn:hover {
+    background-color: rgba(255,255,255,0.2);
+}
+
+/* Навигация - улучшенная версия */
+nav {
+    background-color: #4CAF50;
+    padding: 0 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.nav-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    gap: 20px; /* Равномерные промежутки между элементами */
+}
+
+/* Общие стили для всех элементов навигации */
+.nav-item {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 8px 12px;
+    transition: background-color 0.3s;
+    border-radius: 4px;
+    white-space: nowrap; /* Запрет переноса текста */
+}
+
+.nav-item:hover {
+    background-color: rgba(255,255,255,0.2);
+}
+
+/* Стили для кнопок (Войти/Выйти) */
+.nav-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font: inherit;
+    color: inherit;
+    padding: 8px 12px;
+}
+
+/* Группа навигационных ссылок */
+.nav-group {
+    display: flex;
+    flex: 1; /* Равномерное распределение пространства */
+    justify-content: center;
+    gap: 20px; /* Равные промежутки между ссылками */
+}
+
+/* Пользовательская информация */
+.user-info {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    color: white;
+    font-size: 16px;
+    padding: 8px 12px;
+}
+
+/* Форма выхода */
+.logout-form {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}

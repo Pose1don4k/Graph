@@ -1,0 +1,35 @@
+{% load static %}
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Сайт{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <nav>
+  <div class="nav-container">
+    {% if user.is_authenticated %}
+      <span>Привет, {{ user.username }}</span>
+      <a href="{% url 'home' %}">Главная</a>
+      <a href="{% url 'graph_list' %}">Список графиков</a>
+      <a href="{% url 'my_graphs' %}">Мои графики</a>
+      <a href="{% url 'create_graph' %}">Создать график</a>
+      <form method="post" action="{% url 'logout' %}" id="logout-form" style="border: none;">
+        {% csrf_token %}
+        <button type="submit" class="nav-link logout-link">Выйти</button>
+    </form>
+    {% else %}
+      <span>Гость</span>
+      <a href="{% url 'home' %}">Главная</a>
+      <a href="{% url 'graph_list' %}">Список графиков</a>
+      <a href="{% url 'login' %}">Войти</a>
+      <a href="{% url 'signup' %}">Регистрация</a>
+    {% endif %}
+  </div>
+</nav>
+    <hr>
+    <div class="container">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>

@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}График: {{ graph.title }}{% endblock %}
+
+{% block content %}
+<h2>{{ graph.title }}</h2>
+
+<img src="{% url 'render_graph_image' graph.id %}" alt="График {{ graph.title }}">
+
+<p>
+    <strong>Цвет:</strong> {{ graph.color }}<br>
+    <strong>Толщина:</strong> {{ graph.thickness }}<br>
+    <strong>Масштаб:</strong> {{ graph.scale }}<br>
+    <strong>Тип графика:</strong> {{ graph.get_graph_type_display }}
+</p>
+
+<a href="{% url back_url %}">← Назад</a>
+{% endblock %}

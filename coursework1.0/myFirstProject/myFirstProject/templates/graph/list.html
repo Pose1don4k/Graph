@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block title %}Список графиков{% endblock %}
+{% block content %}
+<h2>Список графиков</h2>
+<ul>
+    {% for graph in graphs %}
+        <li>
+            {{ graph.title }} | автор: {{ graph.user.username }} | цвет: {{ graph.color }} | толщина: {{ graph.thickness }} | масштаб: {{ graph.scale }}
+            — <a href="{% url 'show_graph' graph.id %}?source=all">Показать</a>
+            {% if user == graph.user or user.is_superuser %}
+                — <a href="{% url 'delete_graph' graph.id %}">Удалить</a>
+            {% endif %}
+        </li>
+    {% empty %}
+        <li>Графиков нет.</li>
+    {% endfor %}
+</ul>
+{% endblock %}

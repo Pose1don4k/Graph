@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+{% block title %}График функции{% endblock %}
+{% block content %}
+<h2>График функции y = x²</h2>
+<img src="/plot/image/?color={{ color }}&thickness={{ thickness }}&scale={{ scale }}" alt="График">
+<a class="back-link" href="javascript:history.back()">← Назад</a>
+{% endblock %}
